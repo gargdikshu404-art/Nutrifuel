@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About NutriFuel - Performance Fueling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#20201f",
+                        "surface-tint": "#c6c6c6",
+                        "secondary": "#ffb1c4",
+                        "outline-variant": "#4c4546",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-container": "#000000",
+                        "background": "#131313",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#c6c6c6",
+                        "on-primary": "#303030",
+                        "on-primary-container": "#757575",
+                        "on-tertiary-container": "#747576",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#ffd9e1",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#000000",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#3f001a",
+                        "secondary-fixed-dim": "#ffb1c4",
+                        "outline": "#988e90",
+                        "surface-variant": "#353535",
+                        "surface-bright": "#393939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#590028",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#65002e",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#cfc4c5",
+                        "tertiary": "#c6c6c7",
+                        "secondary-container": "#ff4a8d",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#5e5e5e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#8f0044"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "unit": "4px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Anton"],
+                        "stat-lg": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "2px", "fontWeight": "400" }],
+                        "stat-lg": ["36px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "1.5px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "1px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+        }
+        .neon-border {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hot-pink-gradient {
+            background: linear-gradient(135deg, #ff4a8d 0%, #ff007f 100%);
+        }
+        .void-bg {
+            background-color: #000000;
+        }
+        .surface-bg {
+            background-color: #1A1A1A;
+        }
+        
+        /* Typography Helper Classes generated from config */
+        .font-display-lg { font-family: 'Anton', sans-serif; }
+        .text-display-lg { font-size: 80px; line-height: 80px; letter-spacing: 2px; font-weight: 400; }
+        
+        .font-stat-lg { font-family: 'Anton', sans-serif; }
+        .text-stat-lg { font-size: 36px; line-height: 40px; font-weight: 400; }
+        
+        .font-headline-lg-mobile { font-family: 'Anton', sans-serif; }
+        .text-headline-lg-mobile { font-size: 32px; line-height: 36px; font-weight: 400; }
+        
+        .font-body-md { font-family: 'Hanken Grotesk', sans-serif; }
+        .text-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+        
+        .font-label-caps { font-family: 'JetBrains Mono', monospace; }
+        .text-label-caps { font-size: 12px; line-height: 16px; letter-spacing: 1.5px; font-weight: 700; }
+        
+        .font-headline-lg { font-family: 'Anton', sans-serif; }
+        .text-headline-lg { font-size: 48px; line-height: 52px; letter-spacing: 1px; font-weight: 400; }
+        
+        .font-body-lg { font-family: 'Hanken Grotesk', sans-serif; }
+        .text-body-lg { font-size: 18px; line-height: 28px; font-weight: 400; }
+        
+        .font-headline-md { font-family: 'Anton', sans-serif; }
+        .text-headline-md { font-size: 24px; line-height: 28px; font-weight: 400; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen void-bg flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background text-secondary dark:text-secondary font-display-lg text-display-lg uppercase docked full-width top-0 border-b-2 border-outline-variant flat no shadows">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-secondary dark:text-secondary tracking-tighter">NutriFuel</div>
+<nav class="hidden md:flex gap-stack-md">
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors hover:text-secondary dark:hover:text-secondary transition-all scale-95 duration-200" href="#">Home</a>
+<a class="text-secondary dark:text-secondary border-b-2 border-secondary pb-1 hover:text-secondary dark:hover:text-secondary transition-all scale-95 duration-200" href="#">About</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors hover:text-secondary dark:hover:text-secondary transition-all scale-95 duration-200" href="#">Services</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors hover:text-secondary dark:hover:text-secondary transition-all scale-95 duration-200" href="#">Nutritionists</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors hover:text-secondary dark:hover:text-secondary transition-all scale-95 duration-200" href="#">Testimonials</a>
+</nav>
+<button class="hidden md:block hot-pink-gradient text-primary-container font-label-caps text-label-caps uppercase px-6 py-3 neon-border hover:border-white hover:text-white transition-all neon-glow">Sign In</button>
+<button aria-label="Menu" class="md:hidden text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Brand Story Split Layout -->
+<section class="grid grid-cols-1 md:grid-cols-2 min-h-[819px] border-b-2 border-outline-variant">
+<!-- Text Content -->
+<div class="flex flex-col justify-center px-gutter md:px-stack-lg py-stack-lg bg-background surface-bg z-10 relative">
+<div class="max-w-xl mx-auto md:mr-auto md:ml-0">
+<span class="inline-block bg-secondary-container text-primary-container font-label-caps text-label-caps uppercase px-2 py-1 mb-6 border border-white border-opacity-20">The Origin</span>
+<h1 class="font-display-lg text-display-lg text-inverse-surface mb-stack-md leading-none uppercase">Forge Your <br/><span class="text-secondary">Machine</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                        We reject the soft wellness narrative. NutriFuel was born from the raw intensity of high-performance athletes who demand precision fuel, not vague diets. We engineer nutritional protocols for those who push boundaries, shatter limits, and accept nothing less than absolute dominance over their physical form. 
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                        Every macro calculated. Every micronutrient optimized. This isn't self-care; this is self-mastery.
+                    </p>
+<div class="inline-flex items-center gap-4">
+<button class="hot-pink-gradient text-primary-container font-headline-md text-headline-md uppercase px-8 py-4 neon-border hover:border-white transition-all neon-glow">Start Fueling</button>
+</div>
+</div>
+</div>
+<!-- Image Content -->
+<div class="relative min-h-[512px] md:min-h-full void-bg overflow-hidden border-l border-outline-variant">
+<div class="absolute inset-0 bg-secondary opacity-20 mix-blend-multiply z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover filter grayscale contrast-125 absolute inset-0 z-0" data-alt="A highly intense, high-contrast, cinematic editorial photograph of an elite athlete in peak physical condition mid-workout in a dark, gritty industrial gym setting. The lighting is low-key with harsh, dramatic highlights outlining their musculature. Deep blacks dominate the background, while a subtle, aggressive hot pink light spills onto the subject's skin from off-camera, aligning with the bold athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCklsdqUF6uGMhn4GMI_WXpxMtRAA2h5GY_YxqQsXZOibQK1X4jx395pOqUcwDEnloFDSnjrhH4H8xTz_k9YoTgSsD9yaTBeht7eXh1-fGrTl9hySSjaOw9j0Ab4Nm-8gotDOjS1sbXewW-gRoLDA1I0ELaD2zeznM0GTkGjrF9eZyh6Xl2S8xfRd_jUpQCCIGx29uT_iijMaexRqsJksnqqy4CLgBfeELjZlL_AffeqrcvkNSLMAd3A"/>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="py-24 px-gutter max-w-container-max mx-auto text-center border-b border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg text-inverse-surface uppercase mb-6 mx-auto max-w-4xl leading-tight">
+                Our mission is to arm relentless individuals with the <span class="text-secondary">computational precision</span> required to turn raw ambition into undeniable physical reality.
+            </h2>
+<div class="h-1 w-24 hot-pink-gradient mx-auto mt-stack-md neon-glow"></div>
+</section>
+<!-- Stats Section (Bento Grid Style) -->
+<section class="py-stack-lg px-gutter max-w-container-max mx-auto">
+<h3 class="font-label-caps text-label-caps text-surface-tint uppercase mb-stack-md tracking-widest text-center">By The Numbers</h3>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-md">
+<!-- Stat Card 1 -->
+<div class="md:col-span-5 bg-surface-container-highest p-stack-lg border border-outline-variant flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute inset-0 hot-pink-gradient opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<div>
+<span class="material-symbols-outlined text-secondary mb-4 text-4xl" style="font-variation-settings: 'FILL' 1;">science</span>
+<h4 class="font-stat-lg text-stat-lg text-inverse-surface uppercase mb-2">500+</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Certified Nutritionists</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-md">Elite strategists engineering protocols for maximum output.</p>
+</div>
+<!-- Stat Card 2 (Highlight) -->
+<div class="md:col-span-7 hot-pink-gradient p-stack-lg flex flex-col justify-center items-center text-center relative overflow-hidden neon-glow">
+<!-- Subtle pattern overlay for the gradient card -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent mix-blend-overlay"></div>
+<h4 class="font-display-lg text-display-lg text-primary-container uppercase mb-2 relative z-10">50,000+</h4>
+<p class="font-headline-md text-headline-md text-primary-container uppercase relative z-10">Clients Served</p>
+<p class="font-body-md text-body-md text-primary-container mt-4 max-w-md mx-auto relative z-10 font-bold">Machines optimized. Limits shattered. Results delivered.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-secondary dark:text-secondary font-body-md text-body-md full-width border-t-2 border-secondary flat no shadows focus-within:ring-2 focus-within:ring-secondary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto">
+<div class="md:col-span-6 flex flex-col justify-between">
+<div class="font-display-lg text-headline-lg text-on-surface dark:text-on-surface uppercase mb-6 tracking-tighter">NutriFuel</div>
+<p class="text-on-surface-variant uppercase font-label-caps text-label-caps">© 2024 NUTRIFUEL. PERFORMANCE FUELING.</p>
+</div>
+<div class="md:col-span-6 flex flex-col md:items-end justify-end gap-4">
+<nav class="flex gap-6">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Contact</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>

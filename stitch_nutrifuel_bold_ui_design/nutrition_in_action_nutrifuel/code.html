@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriFuel - Imagery Showcase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#20201f",
+                        "surface-tint": "#c6c6c6",
+                        "secondary": "#ffb1c4",
+                        "outline-variant": "#4c4546",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-container": "#000000",
+                        "background": "#131313",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#c6c6c6",
+                        "on-primary": "#303030",
+                        "on-primary-container": "#757575",
+                        "on-tertiary-container": "#747576",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#ffd9e1",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#000000",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#3f001a",
+                        "secondary-fixed-dim": "#ffb1c4",
+                        "outline": "#988e90",
+                        "surface-variant": "#353535",
+                        "surface-bright": "#393939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#590028",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#65002e",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#cfc4c5",
+                        "tertiary": "#c6c6c7",
+                        "secondary-container": "#ff4a8d",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#5e5e5e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#8f0044"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "unit": "4px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Anton"],
+                        "stat-lg": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "2px", "fontWeight": "400" }],
+                        "stat-lg": ["36px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "1.5px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "1px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-secondary selection:text-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-background border-b-2 border-outline-variant docked full-width top-0 z-50">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md text-secondary tracking-tighter" href="#">NutriFuel</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">Home</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">About</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-label-caps text-label-caps uppercase" href="#">Services</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">Nutritionists</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">Testimonials</a>
+</nav>
+<button class="hidden md:block bg-gradient-to-r from-secondary-container to-[#FF007F] text-on-secondary-container font-label-caps text-label-caps uppercase px-6 py-3 border border-transparent hover:border-white/20 hover:neon-glow transition-all scale-95 duration-200">
+                Sign In
+            </button>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Imagery Showcase Section -->
+<section class="py-stack-lg px-gutter max-w-container-max mx-auto">
+<div class="mb-stack-md text-center md:text-left relative">
+<h2 class="font-display-lg text-display-lg text-white mb-unit uppercase tracking-tighter relative z-10">
+                    FUEL <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#FF007F]">THE MACHINE</span>
+</h2>
+<p class="font-body-lg text-body-lg text-surface-tint max-w-2xl">
+                    High-performance bodies demand high-performance nutrition. Explore our curated selection of elite meals designed for maximum output and rapid recovery.
+                </p>
+<!-- Decorative geometric element -->
+<div class="absolute -top-10 -left-10 w-32 h-32 border-2 border-secondary/20 z-0 hidden md:block"></div>
+<div class="absolute -bottom-5 right-10 w-16 h-16 bg-secondary/10 clip-diagonal z-0 hidden md:block"></div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-md">
+<!-- Hero Image Block (Spans 8 cols on desktop) -->
+<div class="md:col-span-8 relative group overflow-hidden bg-surface-container-lowest border border-white/10 h-[500px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A highly atmospheric, editorial-style photograph of a muscular male athlete intensely focused while consuming a massive, high-protein chicken and rice bowl. The lighting is low-key, with deep black shadows and a harsh, dramatic rim light highlighting sweat and muscle definition. A subtle neon hot-pink gel light spills across the background, emphasizing an aggressive, high-performance aesthetic. Shot from a low angle to convey power." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBad8vrH3RE83TzjQSaqP7xPfKBbukx83otcUtfffboj9ib3IVAKUqTZ_RgW9iQ_NjlmvaB6H_QN2MLwISuDm6L9C0WtOm19mVzMCH6IrPwtUbcR7vjYWcvvnS5aJy05-NCnAQwtKUk51IF_wQ4Vig76EdVT0EqOi4aTlMwk6zjFke352ReFdNhkAlgTZTTm82QjavJLKvl75kHM4T9Ij2a_Un9uV2jurpBDYPjy4daT5YeS135ju7N4g')">
+</div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-stack-md w-full">
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-[#FF007F] text-white font-label-caps text-label-caps px-3 py-1 uppercase tracking-widest">Elite Tier</span>
+<span class="bg-black border border-white/20 text-white font-label-caps text-label-caps px-3 py-1 uppercase tracking-widest">65g Protein</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-white uppercase mb-2">The Apex Predator Bowl</h3>
+<p class="font-body-md text-body-md text-surface-tint">Grilled chicken breast, quinoa, roasted broccoli, and sriracha tahini dressing. Designed for pure muscle synthesis.</p>
+</div>
+</div>
+<!-- Secondary Image Block (Spans 4 cols on desktop) -->
+<div class="md:col-span-4 flex flex-col gap-stack-md">
+<!-- Top Half -->
+<div class="relative group overflow-hidden bg-surface-container-lowest border border-white/10 h-[238px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A striking close-up photograph of a perfectly poured protein shake in a matte black shaker bottle. The background is completely black, creating a void-like depth. A sharp, hot-pink laser light cuts diagonally across the composition, illuminating the condensation on the bottle. The aesthetic is ultra-modern, aggressive, and highly contrasted, resembling an elite sports advertisement." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxfETbPbQICk3PCHHhQh_C53nv1HJkTDj7PIF_O7k6ouJ_dGCezh8DLxHN4WaJYVGN1ud6jP1N4qe4rmGxWPGiAQbVag002PmpFcPEXPfw4yphK5lquhZ_fKSVJ2PzHjeRF0O09NGTcx47yhL4hIW9jG6x4-HVFWbtTyh0ayrD80dB3qEC08QLToGSXylb-3wRWnav_9bX3U2bALDcl_zI9-IxG7D3pto42uw7a7NDLJLdksMcoVdCqg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<h4 class="font-headline-md text-headline-md text-white uppercase">Pre-Workout Fuel</h4>
+</div>
+<!-- Decorative edge -->
+<div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-secondary to-[#FF007F]"></div>
+</div>
+<!-- Bottom Half -->
+<div class="relative group overflow-hidden bg-surface-container-lowest border border-secondary h-[238px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An aggressive, editorial shot of a fit female athlete in dark athletic gear cracking a raw egg into a blender full of dark greens and protein powder. The scene is lit with cinematic, high-contrast lighting—deep blacks contrasting with sharp white highlights and a subtle magenta rim light. The mood is intense and unapologetic, focused on raw nutrition and grit." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8aJ320vQxyJh6jff6GMxdPMHyRORRkkqlsgroXZuo0DGMUhvdnrYlTNDoC3ROCgXloequy7njsBQ0Qj6PELrgYUMSITFzsfsJs48ppztepRT7WusnzuN8QPqcPIcpz-uxC9DZR22LCbKUb8OQ46aufs6LOzbrHBeiXQxXbsOg-BMQ_sv8hbxPXZA_NsG4GAhShROlRHyK5gMU_D3l5B8cgE_0gJz59gebphpmh3YGCijfTzzpNeS0ew')">
+</div>
+<div class="absolute inset-0 bg-black/60"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center border-l-2 border-secondary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-2" data-icon="local_fire_department" data-weight="fill">local_fire_department</span>
+<h4 class="font-headline-md text-headline-md text-white uppercase mb-1">Metabolic Kickstart</h4>
+<a class="font-label-caps text-label-caps text-secondary uppercase hover:text-white transition-colors border-b border-secondary hover:border-white pb-1" href="#">View Recipe</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row Asymmetric -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md mt-stack-md">
+<!-- Text Block -->
+<div class="md:col-span-1 bg-surface-container p-stack-md flex flex-col justify-center border-t-2 border-white/10">
+<h3 class="font-headline-lg text-headline-lg text-white uppercase mb-4">No Excuses.<br/><span class="text-secondary">Just Results.</span></h3>
+<p class="font-body-md text-body-md text-surface-tint mb-6">Our macro-calculated meals leave nothing to chance. Precision engineering for your digestive system to ensure maximum absorption and minimal downtime.</p>
+<button class="bg-transparent border-2 border-secondary text-secondary font-label-caps text-label-caps uppercase px-6 py-3 hover:bg-secondary hover:text-primary-container transition-all self-start flex items-center gap-2">
+                        Browse Plans <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Wide Image Block -->
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container-lowest border border-white/10 min-h-[300px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sprawling, flat-lay photograph of multiple high-protein meal prep containers arranged aggressively on a dark, textured slate surface. The containers are filled with steak, sweet potatoes, and asparagus. The lighting is harsh and directional, creating deep shadows that emphasize the geometric arrangement of the containers. A vibrant hot-pink graphical overlay is subtly integrated into the shadow areas, reinforcing the bold, athletic brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiCznJ53HlY2YoZo6w5SWDHKmAjXH21_0FgPkPytBOZavERZTEzYYUkjFuvX-wjeSwkbvjQbb8fBAjKbUl7bdfbWWynE8Qxk_bjeIcFCcB_4Rg90gqbO7Drfh5bPpcpY7rIzWctI25Y_L3QlbTfmLhj6XvMoPDqc80nGbhicT2ko-Rj-y-CsBytj1_Z0GGgtjHPIv5FG2zQRZcGk6l9nf97zhRbqvx_6cOYzspFKx9tMeozjkrgwcrzg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute top-0 bottom-0 left-0 p-stack-md flex flex-col justify-center w-2/3 md:w-1/2">
+<span class="bg-black border border-white/20 text-white font-label-caps text-label-caps px-3 py-1 uppercase tracking-widest inline-block w-max mb-4">Bulk Prep</span>
+<h4 class="font-headline-lg text-headline-lg text-white uppercase leading-none text-glow">The Weekly<br/>Arsenal</h4>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-secondary w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto">
+<div class="md:col-span-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-display-lg text-headline-lg text-on-surface">NutriFuel</div>
+<div class="flex flex-wrap gap-6 justify-center">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+</div>
+<div class="md:col-span-12 text-center md:text-left mt-4 border-t border-white/10 pt-6">
+<p class="text-on-surface-variant font-body-md text-body-md">© 2024 NUTRIFUEL. PERFORMANCE FUELING.</p>
+</div>
+</div>
+</footer>
+</body></html>

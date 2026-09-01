@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriFuel - Nutritionist Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&family=Hanken+Grotesk:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#20201f",
+                      "surface-tint": "#c6c6c6",
+                      "secondary": "#ffb1c4",
+                      "outline-variant": "#4c4546",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "on-primary-fixed-variant": "#474747",
+                      "primary-container": "#000000",
+                      "background": "#131313",
+                      "on-primary-fixed": "#1b1b1b",
+                      "surface": "#131313",
+                      "primary-fixed": "#e2e2e2",
+                      "primary": "#c6c6c6",
+                      "on-primary": "#303030",
+                      "on-primary-container": "#757575",
+                      "on-tertiary-container": "#747576",
+                      "on-surface": "#e5e2e1",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "inverse-on-surface": "#313030",
+                      "secondary-fixed": "#ffd9e1",
+                      "on-error": "#690005",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary-container": "#000000",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed": "#3f001a",
+                      "secondary-fixed-dim": "#ffb1c4",
+                      "outline": "#988e90",
+                      "surface-variant": "#353535",
+                      "surface-bright": "#393939",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#590028",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "error": "#ffb4ab",
+                      "on-secondary": "#65002e",
+                      "on-tertiary": "#2f3131",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#cfc4c5",
+                      "tertiary": "#c6c6c7",
+                      "secondary-container": "#ff4a8d",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-container-highest": "#353535",
+                      "inverse-primary": "#5e5e5e",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-secondary-fixed-variant": "#8f0044"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "stack-lg": "48px",
+                      "unit": "4px",
+                      "stack-sm": "12px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Anton"],
+                      "stat-lg": ["Anton"],
+                      "headline-lg-mobile": ["Anton"],
+                      "body-md": ["Hanken Grotesk"],
+                      "label-caps": ["JetBrains Mono"],
+                      "headline-lg": ["Anton"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-md": ["Anton"]
+              },
+              "fontSize": {
+                      "display-lg": ["80px", {"lineHeight": "80px", "letterSpacing": "2px", "fontWeight": "400"}],
+                      "stat-lg": ["36px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "1.5px", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "1px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .glow-pink { box-shadow: 0 0 15px 0 rgba(255, 0, 127, 0.3); }
+        .bg-hot-pink-gradient { background: linear-gradient(135deg, #FF007F, #ff4a8d); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background docked full-width top-0 border-b-2 border-outline-variant flat no shadows">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-secondary dark:text-secondary tracking-tighter">NutriFuel</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Home</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">About</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Services</a>
+<a class="text-secondary dark:text-secondary border-b-2 border-secondary pb-1 scale-95 duration-200" href="#">Nutritionists</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Testimonials</a>
+</nav>
+<button class="hidden md:block px-6 py-2 border-2 border-secondary text-secondary font-label-caps text-label-caps uppercase hover:bg-secondary hover:text-background transition-all">Sign In</button>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-stack-lg pb-stack-lg">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+<!-- Left Column: Photo & Quick Stats -->
+<div class="lg:col-span-5 flex flex-col gap-stack-md">
+<div class="relative w-full aspect-[3/4] bg-surface-container border border-white/20">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A striking professional portrait of a highly fit, certified nutritionist in a high-contrast, low-key lighting setting. The subject exudes confidence and athletic intensity, set against a deep void-like black background. Sharp geometric lighting highlights their muscular definition and professional attire, with a subtle hot pink neon bloom effect illuminating the edges, fitting perfectly into a premium, aggressive athletic design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE3Ca8ElA9KNNNctAJNd6BWsFsAa-a7AD7lftaGDMT-2H88VUAxZ6gHzirHOYfxdMlGoQ6hict2TmBa-s0yVQ4a6N3BjLVofq7vNuG-QYzYCC7IUZaa1-xbrvgVeKd0hPcG-yAQPXivotTgi2Xgw0F01O5FENFUfrALqPiT4I7wrKAGad1LvZrGZe0dF5MSMrPIK_CVkX7LQd12nrsKL3kjl6SgmApUClzrnLoob_9LmPwU3qKE_y1Jw"/>
+<!-- Glow effect container -->
+<div class="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,0.8)]"></div>
+</div>
+<div class="grid grid-cols-2 gap-unit bg-primary-container p-4 border-l-2 border-secondary">
+<div class="flex flex-col items-center p-2">
+<span class="font-stat-lg text-stat-lg text-secondary">12+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase text-center mt-1">Years<br/>Experience</span>
+</div>
+<div class="flex flex-col items-center p-2">
+<span class="font-stat-lg text-stat-lg text-secondary">4.9</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase text-center mt-1">Client<br/>Rating</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Details & Actions -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="mb-4">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-2 uppercase tracking-wide">Dr. Sarah Jenkins</h1>
+<p class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Ph.D. Sports Nutrition, RD, CSSD</p>
+</div>
+<div class="flex flex-wrap gap-2 mb-stack-md">
+<span class="bg-secondary text-background font-label-caps text-label-caps px-3 py-1 uppercase">Sports</span>
+<span class="bg-secondary text-background font-label-caps text-label-caps px-3 py-1 uppercase">Keto</span>
+<span class="bg-primary-container border border-white/20 text-on-surface font-label-caps text-label-caps px-3 py-1 uppercase">Endurance</span>
+</div>
+<div class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 uppercase">Bio</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Dr. Sarah Jenkins is a performance-driven sports dietitian specializing in optimizing athletic output through precise macro-nutrient manipulation and ketogenic protocols. She doesn't do "diets"; she engineers fueling strategies for elite competitors and those demanding maximum physical efficiency. Her aggressive, data-backed approach ensures every calorie works as hard as you do in the gym.
+                    </p>
+</div>
+<div class="mt-auto">
+<button class="w-full md:w-auto bg-hot-pink-gradient text-background font-display-lg text-headline-md px-12 py-4 uppercase tracking-widest glow-pink hover:border-2 hover:border-white transition-all transform hover:-translate-y-1">
+                        Book Consultation
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width border-t-2 border-secondary flat no shadows mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto">
+<div class="md:col-span-4 flex flex-col justify-between">
+<div class="font-display-lg text-headline-lg text-on-surface dark:text-on-surface mb-4">NutriFuel</div>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2024 NUTRIFUEL. PERFORMANCE FUELING.</div>
+</div>
+<div class="md:col-span-8 flex flex-col md:flex-row gap-6 md:gap-12 md:justify-end items-start md:items-center">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all focus-within:ring-2 focus-within:ring-secondary" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all focus-within:ring-2 focus-within:ring-secondary" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all focus-within:ring-2 focus-within:ring-secondary" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

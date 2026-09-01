@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriFuel - Book Consultation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#20201f",
+                        "surface-tint": "#c6c6c6",
+                        "secondary": "#ffb1c4",
+                        "outline-variant": "#4c4546",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-container": "#000000",
+                        "background": "#131313",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#c6c6c6",
+                        "on-primary": "#303030",
+                        "on-primary-container": "#757575",
+                        "on-tertiary-container": "#747576",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#ffd9e1",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#000000",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#3f001a",
+                        "secondary-fixed-dim": "#ffb1c4",
+                        "outline": "#988e90",
+                        "surface-variant": "#353535",
+                        "surface-bright": "#393939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#590028",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#65002e",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#cfc4c5",
+                        "tertiary": "#c6c6c7",
+                        "secondary-container": "#ff4a8d",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#5e5e5e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#8f0044"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "unit": "4px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Anton"],
+                        "stat-lg": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-md": ["Hanken Grotesk", "sans-serif"],
+                        "label-caps": ["JetBrains Mono", "monospace"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk", "sans-serif"],
+                        "headline-md": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "2px", "fontWeight": "400" }],
+                        "stat-lg": ["36px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "1.5px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "1px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;600&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #e5e2e1;
+        }
+        .glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+        }
+        .btn-pink-gradient {
+            background: linear-gradient(90deg, #ff4a8d 0%, #ff007f 100%);
+        }
+        .btn-pink-gradient:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .border-pink-glow {
+            border-color: #ff007f;
+            box-shadow: inset 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-background dark:bg-background docked full-width top-0 border-b-2 border-outline-variant flat no shadows z-50 relative">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-secondary dark:text-secondary tracking-tighter uppercase">
+                NutriFuel
+            </div>
+<ul class="hidden md:flex space-x-8 items-center">
+<li><a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">Home</a></li>
+<li><a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">About</a></li>
+<li><a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">Services</a></li>
+<li><a class="text-secondary dark:text-secondary border-b-2 border-secondary pb-1 font-label-caps text-label-caps uppercase" href="#">Nutritionists</a></li>
+<li><a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors" href="#">Testimonials</a></li>
+</ul>
+<button class="hidden md:block font-label-caps text-label-caps uppercase text-secondary border border-secondary px-6 py-2 rounded-DEFAULT hover:bg-secondary hover:text-primary-container transition-all">
+                Sign In
+            </button>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="w-full max-w-container-max mx-auto px-gutter py-stack-lg">
+<header class="mb-stack-lg border-b border-surface-variant pb-stack-md">
+<h1 class="font-headline-lg text-headline-lg uppercase text-on-surface mb-unit">Book a Consultation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Select your expert, choose a time, and prepare to fuel your performance.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+<!-- Left Column: Selection & Form -->
+<div class="lg:col-span-8 space-y-stack-md">
+<!-- Nutritionist Selection -->
+<section class="bg-surface-container border-t border-surface-variant p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="group">group</span>
+                        1. Select Nutritionist
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Option 1 -->
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="nutritionist" type="radio"/>
+<div class="bg-background border border-surface-variant p-4 rounded-DEFAULT peer-checked:border-pink-glow transition-all flex gap-4 items-center h-full">
+<div class="w-16 h-16 rounded-full overflow-hidden border border-surface-variant shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of a male nutritionist in athletic wear, dramatic low-key lighting with a subtle pink rim light, looking confident against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh9_MhGEQdikX5AuAKjaqwV8vMJkHWgq4b3bZrVIDss8SIao44BwtYRWupg4AMsdPs-ADTtlV_XkNJMlrih5ykBseG32QZkpnisOHsyfj95LfxldxYj8mOANXEuD4onvX8zsG_PaFLEAlUgln4WH2GqYosiFNyem9gWUU6mtwqUdn7M5N4788xjVO5irQ48rESADuMpmlAiH9oeMTdszjSgJrxnebSlFRDtqG2BMIVUXUUWUC0vLsNQg"/>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface">Dr. Marcus Vance</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Elite Strength Fueling</p>
+</div>
+<div class="ml-auto peer-checked:block hidden text-secondary">
+<span class="material-symbols-outlined" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="nutritionist" type="radio"/>
+<div class="bg-background border border-surface-variant p-4 rounded-DEFAULT peer-checked:border-pink-glow transition-all flex gap-4 items-center h-full">
+<div class="w-16 h-16 rounded-full overflow-hidden border border-surface-variant shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of a female nutritionist with intense focus, dark gym setting, high-contrast lighting with deep shadows and sharp highlights, athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLg5MiyYdHMmp3s7eDHTnJMtYIvbx7eAV6yqJUM6vNUkYampAkfAFF-sOq7p2y74AHmGmIyjGthKUn_N2SIIFkNp5lCYenXuApsFUJHSD_MUicBr-TgDTuHS-7AQBOqSvi3o3C9d0SlzUGD0jnbgKMrs2iB5GTN-7MpIux4L-EX89qExFFtWIZN1uKLAQGbGgJTFwpGWJxKRb8RLn-tA7aeLTSXHINwm93HLsVq6KSCoArnkQrQujaEQ"/>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface">Sarah Jenkins, RD</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Endurance &amp; Recovery</p>
+</div>
+<div class="ml-auto peer-checked:block hidden text-secondary">
+<span class="material-symbols-outlined" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Consultation Type -->
+<section class="bg-surface-container border-t border-surface-variant p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-surface-variant"></div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="laptop_mac">laptop_mac</span>
+                        2. Consultation Type
+                    </h2>
+<div class="flex flex-wrap gap-4">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="type" type="radio"/>
+<div class="bg-background border border-surface-variant px-6 py-3 rounded-DEFAULT font-label-caps text-label-caps uppercase peer-checked:bg-secondary peer-checked:text-primary-container peer-checked:border-secondary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="videocam">videocam</span> Video Call
+                            </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="type" type="radio"/>
+<div class="bg-background border border-surface-variant px-6 py-3 rounded-DEFAULT font-label-caps text-label-caps uppercase peer-checked:bg-secondary peer-checked:text-primary-container peer-checked:border-secondary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span> Chat
+                            </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="type" type="radio"/>
+<div class="bg-background border border-surface-variant px-6 py-3 rounded-DEFAULT font-label-caps text-label-caps uppercase peer-checked:bg-secondary peer-checked:text-primary-container peer-checked:border-secondary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="meeting_room">meeting_room</span> In-Person
+                            </div>
+</label>
+</div>
+</section>
+<!-- Calendar / Time Picker -->
+<section class="bg-surface-container border-t border-surface-variant p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-surface-variant"></div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_month">calendar_month</span>
+                        3. Schedule Time
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Pseudo Calendar -->
+<div class="bg-background border border-surface-variant p-4">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase">October 2024</span>
+<div class="flex gap-2">
+<button class="text-on-surface-variant hover:text-secondary"><span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span></button>
+<button class="text-on-surface-variant hover:text-secondary"><span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center font-label-caps text-xs text-on-surface-variant mb-2">
+<div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center font-body-md text-sm">
+<!-- Dummy dates -->
+<div class="py-2 text-surface-variant">29</div><div class="py-2 text-surface-variant">30</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">1</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">2</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">3</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">4</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">5</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">6</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">7</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">8</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">9</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">10</div>
+<div class="py-2 cursor-pointer bg-secondary text-primary-container font-bold">11</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">12</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">13</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">14</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">15</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">16</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">17</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">18</div>
+<div class="py-2 cursor-pointer hover:border hover:border-secondary">19</div>
+</div>
+</div>
+<!-- Time Slots -->
+<div>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-4">Available Slots for Oct 11</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-background border border-surface-variant py-2 font-label-caps text-label-caps text-on-surface hover:border-secondary transition-colors">09:00 AM</button>
+<button class="bg-background border border-surface-variant py-2 font-label-caps text-label-caps text-on-surface hover:border-secondary transition-colors">10:00 AM</button>
+<button class="bg-background border border-secondary py-2 font-label-caps text-label-caps text-secondary shadow-[0_0_10px_rgba(255,177,196,0.2)]">11:30 AM</button>
+<button class="bg-background border border-surface-variant py-2 font-label-caps text-label-caps text-on-surface hover:border-secondary transition-colors">01:00 PM</button>
+<button class="bg-background border border-surface-variant py-2 font-label-caps text-label-caps text-on-surface hover:border-secondary transition-colors">03:00 PM</button>
+<button class="bg-background border border-surface-variant py-2 font-label-caps text-label-caps text-on-surface hover:border-secondary transition-colors">04:30 PM</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Details -->
+<section class="bg-surface-container border-t border-surface-variant p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-surface-variant"></div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="edit_note">edit_note</span>
+                        4. Your Details
+                    </h2>
+<div class="space-y-4">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Goals / Focus</label>
+<input class="w-full bg-background border-0 border-b-2 border-surface-variant focus:border-secondary focus:ring-0 text-on-surface font-body-md py-2 transition-colors placeholder-on-surface-variant/50" placeholder="e.g., Marathon prep, Muscle gain" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Additional Notes</label>
+<textarea class="w-full bg-background border-0 border-b-2 border-surface-variant focus:border-secondary focus:ring-0 text-on-surface font-body-md py-2 transition-colors placeholder-on-surface-variant/50" placeholder="Any dietary restrictions or injuries?" rows="2"></textarea>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Summary & CTA -->
+<div class="lg:col-span-4">
+<div class="bg-background border border-surface-variant p-6 sticky top-24">
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface mb-6 border-b border-surface-variant pb-4">Booking Summary</h2>
+<ul class="space-y-4 mb-8 font-body-md">
+<li class="flex justify-between items-start">
+<span class="text-on-surface-variant font-label-caps text-label-caps uppercase">Expert</span>
+<span class="text-right text-on-surface">Dr. Marcus Vance</span>
+</li>
+<li class="flex justify-between items-start">
+<span class="text-on-surface-variant font-label-caps text-label-caps uppercase">Type</span>
+<span class="text-right text-on-surface">Video Call</span>
+</li>
+<li class="flex justify-between items-start">
+<span class="text-on-surface-variant font-label-caps text-label-caps uppercase">Date &amp; Time</span>
+<span class="text-right text-on-surface">Oct 11, 2024<br/>11:30 AM EST</span>
+</li>
+<li class="flex justify-between items-start pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant font-label-caps text-label-caps uppercase">Fee</span>
+<span class="text-right text-on-surface font-headline-md text-secondary">$150.00</span>
+</li>
+</ul>
+<button class="w-full btn-pink-gradient text-primary-container font-display-lg text-headline-md uppercase py-4 rounded-DEFAULT transition-all glow-pink tracking-wide">
+                        Confirm Booking
+                    </button>
+<p class="text-center text-xs font-label-caps text-on-surface-variant mt-4 uppercase">Payment processed securely</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width border-t-2 border-secondary flat no shadows mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto">
+<div class="md:col-span-6">
+<div class="font-display-lg text-headline-lg text-on-surface dark:text-on-surface mb-4 uppercase tracking-tighter">
+                    NutriFuel
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 NUTRIFUEL. PERFORMANCE FUELING.</p>
+</div>
+<div class="md:col-span-6 flex justify-start md:justify-end items-center space-x-6">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile | NutriFuel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#20201f",
+                      "surface-tint": "#c6c6c6",
+                      "secondary": "#ffb1c4",
+                      "outline-variant": "#4c4546",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "on-primary-fixed-variant": "#474747",
+                      "primary-container": "#000000",
+                      "background": "#131313",
+                      "on-primary-fixed": "#1b1b1b",
+                      "surface": "#131313",
+                      "primary-fixed": "#e2e2e2",
+                      "primary": "#c6c6c6",
+                      "on-primary": "#303030",
+                      "on-primary-container": "#757575",
+                      "on-tertiary-container": "#747576",
+                      "on-surface": "#e5e2e1",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "inverse-on-surface": "#313030",
+                      "secondary-fixed": "#ffd9e1",
+                      "on-error": "#690005",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary-container": "#000000",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed": "#3f001a",
+                      "secondary-fixed-dim": "#ffb1c4",
+                      "outline": "#988e90",
+                      "surface-variant": "#353535",
+                      "surface-bright": "#393939",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#590028",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "error": "#ffb4ab",
+                      "on-secondary": "#65002e",
+                      "on-tertiary": "#2f3131",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#cfc4c5",
+                      "tertiary": "#c6c6c7",
+                      "secondary-container": "#ff4a8d",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-container-highest": "#353535",
+                      "inverse-primary": "#5e5e5e",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-secondary-fixed-variant": "#8f0044"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "stack-lg": "48px",
+                      "unit": "4px",
+                      "stack-sm": "12px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Anton"
+                      ],
+                      "stat-lg": [
+                              "Anton"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-caps": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Anton"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "2px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "stat-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "1.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "1px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+        }
+        .hard-border {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .featured-border {
+            border-left: 2px solid #ff4a8d;
+        }
+        /* Gradient for hot pink text/elements */
+        .hot-pink-gradient {
+            background: linear-gradient(90deg, #ff4a8d 0%, #ffb1c4 100%);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      </style>
+</head>
+<body class="font-body-md text-body-md bg-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 bg-background border-b-2 border-outline-variant z-50">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-secondary tracking-tighter">NutriFuel</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Home</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">About</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Services</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Nutritionists</a>
+<a class="text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Testimonials</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-6 py-2 uppercase hover:border hover:border-white neon-glow transition-all">Sign In</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-stack-lg grid grid-cols-1 md:grid-cols-12 gap-stack-lg">
+<!-- Profile Sidebar -->
+<aside class="md:col-span-4 flex flex-col gap-stack-md">
+<!-- Profile Card -->
+<div class="bg-primary-container hard-border p-6 flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border-2 border-secondary mb-4 neon-glow">
+<img class="w-full h-full object-cover" data-alt="A striking portrait of a determined athlete looking directly at the camera, highly detailed, dramatic studio lighting against a pitch black background. The athlete has a focused expression, sweat glistening slightly. The image is strictly high-contrast, black and white with a subtle hot pink color grade cast over the shadows, embodying an intense, high-performance athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWL7Iivuk9KS3ex8yG4vQ8auzrX_k8hEYRPcjShl33NEn7TU13EKDvAYBxgcyK8CKvSiH8eppHgxQlQ-9CL60VaJB_MGSmyiWVT3689ghPikFWd8a06bq7jWM0QVMRPe_6IAgWaZHvjdRfU633YK4I4M-8hv-8STMkqKE1GakPAWcIc2jRL7X1ylKnlYfkBuIBNc0NLFLHjVHVx8HpDkWRYkng-d8vNokYJ5WiexGfMQ9bqxq2_NpQYQ"/>
+</div>
+<h1 class="font-headline-md text-headline-md uppercase text-on-surface mb-1">Alex Vance</h1>
+<p class="font-label-caps text-label-caps text-secondary mb-6">Elite Tier</p>
+<div class="grid grid-cols-3 gap-4 w-full border-t border-outline-variant pt-6 mt-2">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Age</p>
+<p class="font-stat-lg text-stat-lg">28</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Weight</p>
+<p class="font-stat-lg text-stat-lg">185<span class="text-body-md font-body-md ml-1 text-on-surface-variant">lbs</span></p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Goal</p>
+<p class="font-stat-lg text-stat-lg">CUT</p>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="bg-primary-container hard-border p-6 flex flex-col gap-4">
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2 border-b border-outline-variant pb-2">Actions</h3>
+<a class="flex items-center justify-between group cursor-pointer pb-2 border-b border-outline-variant" href="#">
+<span class="font-label-caps text-label-caps uppercase group-hover:text-secondary transition-colors">Consultation History</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between group cursor-pointer pb-2 border-b border-outline-variant" href="#">
+<span class="font-label-caps text-label-caps uppercase group-hover:text-secondary transition-colors">Payment Methods</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between group cursor-pointer pb-2" href="#">
+<span class="font-label-caps text-label-caps uppercase group-hover:text-secondary transition-colors">Settings</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</aside>
+<!-- Main Dashboard Area -->
+<div class="md:col-span-8 flex flex-col gap-stack-lg">
+<!-- Active Plan Bento -->
+<section class="bg-primary-container hard-border featured-border p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-2 py-1 uppercase mb-4 inline-block">Active Plan</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Shred Protocol V2</h2>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary">local_fire_department</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">A high-intensity caloric deficit program focused on maximizing protein intake while stripping body fat. Requires strict adherence.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container p-4 border-l-2 border-secondary">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Daily Kcal</p>
+<p class="font-stat-lg text-stat-lg">2100</p>
+</div>
+<div class="bg-surface-container p-4 border-l-2 border-secondary">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Protein</p>
+<p class="font-stat-lg text-stat-lg">220g</p>
+</div>
+<div class="bg-surface-container p-4 border-l-2 border-outline-variant">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Carbs</p>
+<p class="font-stat-lg text-stat-lg">150g</p>
+</div>
+<div class="bg-surface-container p-4 border-l-2 border-outline-variant">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Fats</p>
+<p class="font-stat-lg text-stat-lg">60g</p>
+</div>
+</div>
+</section>
+<!-- Progress Tracker -->
+<section class="bg-primary-container hard-border p-8">
+<div class="flex justify-between items-center mb-8 border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface">Weekly Adherence</h2>
+<span class="font-label-caps text-label-caps text-secondary bg-surface-container px-3 py-1 uppercase border border-outline-variant">On Track</span>
+</div>
+<div class="w-full h-64 flex items-end justify-between gap-2">
+<!-- Faux Chart Bars -->
+<div class="w-full bg-secondary-container h-[80%] hover:h-[85%] transition-all opacity-80 border-t-2 border-secondary relative group cursor-crosshair">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface text-on-surface font-label-caps text-label-caps px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant">Mon: 95%</div>
+</div>
+<div class="w-full bg-secondary-container h-[95%] hover:h-[100%] transition-all opacity-90 border-t-2 border-secondary relative group cursor-crosshair">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface text-on-surface font-label-caps text-label-caps px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant">Tue: 100%</div>
+</div>
+<div class="w-full bg-secondary-container h-[70%] hover:h-[75%] transition-all opacity-60 border-t-2 border-secondary relative group cursor-crosshair">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface text-on-surface font-label-caps text-label-caps px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant">Wed: 80%</div>
+</div>
+<div class="w-full bg-secondary-container h-[88%] hover:h-[93%] transition-all opacity-80 border-t-2 border-secondary relative group cursor-crosshair">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface text-on-surface font-label-caps text-label-caps px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant">Thu: 92%</div>
+</div>
+<div class="w-full bg-secondary-container h-[100%] hover:h-[100%] transition-all opacity-100 border-t-2 border-secondary relative group cursor-crosshair neon-glow">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface text-on-surface font-label-caps text-label-caps px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant">Fri: 110% (PR)</div>
+</div>
+<div class="w-full bg-surface-container h-[20%] border-t-2 border-outline-variant"></div>
+<div class="w-full bg-surface-container h-[20%] border-t-2 border-outline-variant"></div>
+</div>
+<div class="flex justify-between mt-4 border-t border-outline-variant pt-4 text-on-surface-variant font-label-caps text-label-caps">
+<span>MON</span>
+<span>TUE</span>
+<span>WED</span>
+<span>THU</span>
+<span>FRI</span>
+<span>SAT</span>
+<span>SUN</span>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-surface-container-lowest border-t-2 border-secondary mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto items-center">
+<div class="md:col-span-6">
+<p class="font-display-lg text-headline-lg text-on-surface">NUTRIFUEL</p>
+<p class="text-on-surface-variant font-label-caps text-label-caps uppercase mt-2">© 2024 NUTRIFUEL. PERFORMANCE FUELING.</p>
+</div>
+<div class="md:col-span-6 flex gap-6 justify-start md:justify-end">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

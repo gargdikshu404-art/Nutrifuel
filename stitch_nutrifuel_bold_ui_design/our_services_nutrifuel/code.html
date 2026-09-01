@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriFuel - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#20201f",
+                        "surface-tint": "#c6c6c6",
+                        "secondary": "#ffb1c4",
+                        "outline-variant": "#4c4546",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-container": "#000000",
+                        "background": "#131313",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#c6c6c6",
+                        "on-primary": "#303030",
+                        "on-primary-container": "#757575",
+                        "on-tertiary-container": "#747576",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#ffd9e1",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#000000",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#3f001a",
+                        "secondary-fixed-dim": "#ffb1c4",
+                        "outline": "#988e90",
+                        "surface-variant": "#353535",
+                        "surface-bright": "#393939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#590028",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#65002e",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#cfc4c5",
+                        "tertiary": "#c6c6c7",
+                        "secondary-container": "#ff4a8d",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#5e5e5e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#8f0044"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "unit": "4px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Anton"],
+                        "stat-lg": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "2px", "fontWeight": "400" }],
+                        "stat-lg": ["36px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "1.5px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "1px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .service-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: #ffb1c4;
+            box-shadow: 0 0 15px rgba(255, 177, 196, 0.3) inset, 0 0 10px rgba(255, 177, 196, 0.2);
+        }
+        .text-glow-hover:hover {
+            text-shadow: 0 0 8px rgba(255, 177, 196, 0.8);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #ff4a8d 0%, #ffb1c4 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            border: 2px solid white;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar Component -->
+<nav class="docked full-width top-0 border-b-2 border-outline-variant bg-background dark:bg-background z-50 sticky">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-secondary dark:text-secondary tracking-tighter cursor-pointer text-glow-hover">NutriFuel</div>
+<div class="hidden md:flex gap-stack-md items-center">
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Home</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">About</a>
+<a class="text-secondary dark:text-secondary border-b-2 border-secondary pb-1 scale-95 duration-200" href="#">Services</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Nutritionists</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps uppercase hover:text-secondary transition-colors scale-95 duration-200" href="#">Testimonials</a>
+</div>
+<button class="btn-primary text-primary-container font-label-caps text-label-caps px-6 py-2 uppercase tracking-widest hidden md:block">
+                Sign In
+            </button>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="w-full bg-primary-container py-stack-lg border-b border-white/10 relative overflow-hidden">
+<div class="absolute inset-0 opacity-20" data-alt="Dark, high-contrast athletic gym environment with neon pink lighting accents illuminating heavy weights and kettlebells, moody editorial photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB3I7tvB1n5WEq63ILdusFmQQH-LuwmyykZoekIu87pm-XBvWGPjbeD-K1Tycf3lbIgmHPd1gwUh15ua4uMcuIzYA721G5i4unbImvLJCFznLlsFLEPR1u-e_TbU_7iR_WmlfmQ_DyzyNSHlF2IPpybY4v-ENMLbYDeA3D2qI47eL-3UTEFSoiyHo_bjD2APFhpTD5h1i2aUfGMLXbuNaksMyGwUX-yAbS6PIRxXd5TmS9OYrglqvLBg')"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 flex flex-col items-center text-center">
+<h1 class="font-display-lg text-display-lg text-on-surface uppercase mb-stack-sm md:hidden">FUEL YOUR<br/><span class="text-secondary">AMBITION</span></h1>
+<h1 class="font-display-lg text-display-lg text-on-surface uppercase mb-stack-sm hidden md:block">FUEL YOUR <span class="text-secondary">AMBITION</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-md">Precision nutrition strategies engineered for high-performance individuals. Select a protocol tailored to your specific physiological goals.</p>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="max-w-container-max mx-auto px-gutter py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-md">
+<!-- Service Card 1 -->
+<div class="service-card bg-surface-container-low p-stack-md flex flex-col h-full cursor-pointer group">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">monitor_weight</span>
+<div class="bg-secondary-container text-on-primary-fixed font-label-caps text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider">Most Popular</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-unit">Weight Loss Plans</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Aggressive, science-backed caloric deficit protocols designed to strip away body fat while preserving lean muscle mass.</p>
+<div class="border-t border-white/10 pt-stack-sm flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-surface-tint">STARTING AT</span>
+<span class="font-stat-lg text-stat-lg text-secondary">$149<span class="font-body-md text-sm text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="service-card bg-surface-container-low p-stack-md flex flex-col h-full cursor-pointer group">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<div class="border border-white/20 text-on-surface font-label-caps text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider">High Calorie</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-unit">Muscle Gain Diets</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Hypertrophy-focused nutrition planning. Optimized protein synthesis through calculated caloric surpluses and timing strategies.</p>
+<div class="border-t border-white/10 pt-stack-sm flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-surface-tint">STARTING AT</span>
+<span class="font-stat-lg text-stat-lg text-secondary">$179<span class="font-body-md text-sm text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="service-card bg-surface-container-low p-stack-md flex flex-col h-full cursor-pointer group">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">bloodtype</span>
+<div class="border border-white/20 text-on-surface font-label-caps text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider">Clinical</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-unit">Diabetic Meal Plans</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Precision glycemic control through expertly timed, low-GI carbohydrate protocols designed to stabilize blood sugar levels.</p>
+<div class="border-t border-white/10 pt-stack-sm flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-surface-tint">STARTING AT</span>
+<span class="font-stat-lg text-stat-lg text-secondary">$199<span class="font-body-md text-sm text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="service-card bg-surface-container-low p-stack-md flex flex-col h-full cursor-pointer group border-l-2 border-l-secondary">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">sprint</span>
+<div class="bg-secondary-container text-on-primary-fixed font-label-caps text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider">Elite</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-unit">Sports Nutrition</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Advanced fueling strategies for endurance and explosive athletes. Macro periodization aligned with training cycles.</p>
+<div class="border-t border-white/10 pt-stack-sm flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-surface-tint">STARTING AT</span>
+<span class="font-stat-lg text-stat-lg text-secondary">$249<span class="font-body-md text-sm text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="service-card bg-surface-container-low p-stack-md flex flex-col h-full cursor-pointer group">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">local_drink</span>
+<div class="border border-white/20 text-on-surface font-label-caps text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider">Short Term</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-unit">Detox Programs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Intensive, nutrient-dense resets designed to optimize gut health, reduce inflammation, and kickstart metabolic function.</p>
+<div class="border-t border-white/10 pt-stack-sm flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-surface-tint">STARTING AT</span>
+<span class="font-stat-lg text-stat-lg text-secondary">$89<span class="font-body-md text-sm text-on-surface-variant">/wk</span></span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="full-width border-t-2 border-secondary bg-surface-container-lowest dark:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-secondary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-display-lg text-headline-lg text-on-surface dark:text-on-surface mb-stack-sm">NutriFuel</div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary">© 2024 NUTRIFUEL. PERFORMANCE FUELING.</p>
+</div>
+<div class="md:col-span-8 flex flex-col md:flex-row md:justify-end gap-stack-md md:gap-stack-lg md:items-center">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
