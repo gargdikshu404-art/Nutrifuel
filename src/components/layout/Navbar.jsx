@@ -14,8 +14,7 @@ export const Navbar = ({ activePage, setActivePage }) => {
     { id: 'services', label: 'Services' },
     { id: 'nutritionists', label: 'Nutritionists' },
     { id: 'action', label: 'In Action' },
-    { id: 'stories', label: 'Testimonials' },
-    { id: 'admin', label: 'Admin Panel' }
+    { id: 'stories', label: 'Testimonials' }
   ];
 
   const handleNavClick = (pageId) => {
