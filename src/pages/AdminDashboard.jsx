@@ -102,8 +102,8 @@ export const AdminDashboard = ({ setActivePage }) => {
         <div className="p-6 bg-surface-container-low border border-white/10 space-y-4">
           <div className="flex justify-between items-center">
             <div>
-              <h3 className="font-display-lg text-xl uppercase text-white">Monthly Gross Revenue ($k)</h3>
-              <p className="font-body-md text-xs text-on-surface-variant">Q2-Q3 2024 Performance Fueling Revenue</p>
+              <h3 className="font-display-lg text-xl uppercase text-white">Monthly Gross Revenue (₹)</h3>
+              <p className="font-body-md text-xs text-on-surface-variant">Q2-Q3 2024 Performance Fueling Revenue (in Thousands)</p>
             </div>
             <span className="font-label-caps text-xs text-secondary uppercase font-bold">
               +22.8% YOY Growth
@@ -114,7 +114,7 @@ export const AdminDashboard = ({ setActivePage }) => {
             {dashboardData.revenueHistory.map((item, idx) => (
               <div key={idx} className="flex-1 flex flex-col items-center gap-2 group">
                 <span className="font-label-caps text-[10px] text-secondary opacity-0 group-hover:opacity-100 transition-opacity font-bold">
-                  ${item.rev}k
+                  ₹{item.rev}k
                 </span>
                 <div
                   className="w-full bg-gradient-to-t from-secondary-container to-secondary transition-all group-hover:brightness-125"

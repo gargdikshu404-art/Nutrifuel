@@ -42,7 +42,7 @@ export const Home = ({ setActivePage }) => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => { setActivePage('services'); window.scrollTo(0,0); }}
-                className="font-label-caps text-label-caps uppercase px-8 py-4 bg-gradient-to-r from-secondary-container to-[#ff007f] text-white border-2 border-transparent hover:border-white transition-all neon-glow flex items-center justify-center gap-2 w-full sm:w-auto shadow-2xl group"
+                className="font-body-md text-sm font-semibold px-7 py-3.5 bg-gradient-to-r from-secondary-container to-[#ff007f] text-white rounded-xl hover:brightness-110 transition-all neon-glow flex items-center justify-center gap-2 w-full sm:w-auto shadow-xl group"
               >
                 <span>Get Your Diet Plan</span>
                 <span className="material-symbols-outlined text-[20px] group-hover:scale-125 transition-transform">bolt</span>
@@ -50,7 +50,7 @@ export const Home = ({ setActivePage }) => {
 
               <button
                 onClick={() => { setActivePage('book'); window.scrollTo(0,0); }}
-                className="font-label-caps text-label-caps uppercase px-8 py-4 bg-surface-container border border-outline-variant hover:border-secondary-container hover:text-secondary transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="font-body-md text-sm font-semibold px-7 py-3.5 bg-surface-container/80 backdrop-blur border border-white/15 text-white rounded-xl hover:border-secondary hover:text-secondary transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 <span>Book Consultation</span>
                 <span className="material-symbols-outlined text-[20px]">calendar_month</span>
@@ -100,10 +100,10 @@ export const Home = ({ setActivePage }) => {
             {SERVICES_PLANS.slice(0, 3).map((plan) => (
               <div
                 key={plan.id}
-                className={`p-6 bg-surface-container-low border transition-all duration-300 flex flex-col justify-between group ${
+                className={`p-6 bg-surface-container-low border rounded-2xl transition-all duration-300 flex flex-col justify-between group ${
                   plan.isElite
-                    ? 'border-l-4 border-l-secondary-container border-white/10 hover:border-secondary shadow-[0_0_20px_rgba(255,74,141,0.15)]'
-                    : 'border-white/10 hover:border-secondary/60'
+                    ? 'border-2 border-secondary-container shadow-[0_0_25px_rgba(255,74,141,0.2)] relative'
+                    : 'border-white/10 hover:border-secondary/50'
                 }`}
               >
                 <div>
@@ -111,7 +111,7 @@ export const Home = ({ setActivePage }) => {
                     <span className="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform">
                       {plan.icon}
                     </span>
-                    <span className={`px-2.5 py-1 font-label-caps text-[10px] uppercase tracking-wider ${
+                    <span className={`px-3 py-1 rounded-full font-label-caps text-[10px] uppercase font-bold tracking-wider ${
                       plan.isElite ? 'bg-secondary-container text-white' : 'border border-white/20 text-on-surface'
                     }`}>
                       {plan.badge}
@@ -127,12 +127,12 @@ export const Home = ({ setActivePage }) => {
                   <div className="border-t border-white/10 pt-4 flex justify-between items-center mb-4">
                     <span className="font-label-caps text-[11px] text-surface-tint uppercase">STARTING AT</span>
                     <span className="font-display-lg text-3xl text-secondary">
-                      ${plan.price}<span className="font-body-md text-sm text-on-surface-variant">{plan.period}</span>
+                      ₹{plan.price}<span className="font-body-md text-sm text-on-surface-variant">{plan.period}</span>
                     </span>
                   </div>
                   <button
                     onClick={() => { setActivePage('checkout'); window.scrollTo(0,0); }}
-                    className="w-full py-3 bg-surface-container border border-white/15 hover:border-secondary hover:bg-secondary/10 text-white font-label-caps text-xs uppercase transition-all flex items-center justify-center gap-2"
+                    className="w-full py-3 bg-surface-container border border-white/15 rounded-xl hover:border-secondary hover:bg-secondary/10 text-white font-body-md text-xs font-semibold uppercase transition-all flex items-center justify-center gap-2"
                   >
                     <span>Configure Plan</span>
                     <span className="material-symbols-outlined text-sm">arrow_forward</span>

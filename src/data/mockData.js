@@ -90,7 +90,7 @@ export const SERVICES_PLANS = [
     title: 'Hypertrophy Blueprint',
     badge: 'Popular',
     icon: 'fitness_center',
-    price: 179,
+    price: 1799,
     period: '/mo',
     description: 'Hypertrophy-focused nutrition planning. Optimized protein synthesis through calculated caloric surpluses and timing strategies.',
     features: [
@@ -108,7 +108,7 @@ export const SERVICES_PLANS = [
     badge: 'Elite',
     isElite: true,
     icon: 'sprint',
-    price: 249,
+    price: 2499,
     period: '/mo',
     description: 'Advanced fueling strategies for endurance and explosive athletes. Macro periodization aligned with training cycles.',
     features: [
@@ -125,7 +125,7 @@ export const SERVICES_PLANS = [
     title: 'Diabetic & Glycemic Control',
     badge: 'Clinical',
     icon: 'bloodtype',
-    price: 199,
+    price: 1999,
     period: '/mo',
     description: 'Precision glycemic control through expertly timed, low-GI carbohydrate protocols designed to stabilize blood sugar levels.',
     features: [
@@ -142,7 +142,7 @@ export const SERVICES_PLANS = [
     title: 'Metabolic Detox Reset',
     badge: 'Short Term',
     icon: 'local_drink',
-    price: 89,
+    price: 899,
     period: '/wk',
     description: 'Intensive, nutrient-dense resets designed to optimize gut health, reduce systemic inflammation, and kickstart metabolic function.',
     features: [
@@ -158,7 +158,7 @@ export const SERVICES_PLANS = [
     title: 'Pro Competition Prep',
     badge: 'Extreme',
     icon: 'military_tech',
-    price: 349,
+    price: 3499,
     period: '/mo',
     description: 'Uncompromising contest preparation for stage or fight night. Daily check-ins, water manipulation, and peak week mastery.',
     features: [
@@ -312,17 +312,17 @@ export const CURRENT_USER = {
 };
 
 export const PAYMENT_HISTORY_DATA = [
-  { id: 'INV-2024-0089', date: 'Aug 01, 2024', plan: 'Sports Nutrition Elite (Monthly)', amount: '$249.00', status: 'PAID', method: '•••• 4242 (Visa)' },
-  { id: 'INV-2024-0062', date: 'Jul 01, 2024', plan: 'Sports Nutrition Elite (Monthly)', amount: '$249.00', status: 'PAID', method: '•••• 4242 (Visa)' },
-  { id: 'INV-2024-0041', date: 'Jun 01, 2024', plan: 'Sports Nutrition Elite (Monthly)', amount: '$249.00', status: 'PAID', method: '•••• 4242 (Visa)' },
-  { id: 'INV-2024-0019', date: 'May 01, 2024', plan: 'Hypertrophy Blueprint (Monthly)', amount: '$179.00', status: 'PAID', method: '•••• 4242 (Visa)' },
-  { id: 'INV-2024-0005', date: 'Apr 01, 2024', plan: 'Consultation Initial Assessment', amount: '$95.00', status: 'PAID', method: '•••• 4242 (Visa)' }
+  { id: 'INV-2024-0089', date: 'Aug 01, 2024', plan: 'Sports Nutrition Elite (Monthly)', amount: '₹2,499.00', status: 'PAID', method: '•••• 4242 (UPI / Visa)' },
+  { id: 'INV-2024-0062', date: 'Jul 01, 2024', plan: 'Sports Nutrition Elite (Monthly)', amount: '₹2,499.00', status: 'PAID', method: '•••• 4242 (UPI / Visa)' },
+  { id: 'INV-2024-0041', date: 'Jun 01, 2024', plan: 'Sports Nutrition Elite (Monthly)', amount: '₹2,499.00', status: 'PAID', method: '•••• 4242 (UPI / Visa)' },
+  { id: 'INV-2024-0019', date: 'May 01, 2024', plan: 'Hypertrophy Blueprint (Monthly)', amount: '₹1,799.00', status: 'PAID', method: '•••• 4242 (UPI / Visa)' },
+  { id: 'INV-2024-0005', date: 'Apr 01, 2024', plan: 'Consultation Initial Assessment', amount: '₹950.00', status: 'PAID', method: '•••• 4242 (UPI / Visa)' }
 ];
 
 export const ADMIN_DASHBOARD_DATA = {
   kpis: [
     { label: 'ACTIVE ATHLETES', value: '1,428', change: '+14.2%', icon: 'group', positive: true },
-    { label: 'MONTHLY REVENUE', value: '$348,200', change: '+22.8%', icon: 'payments', positive: true },
+    { label: 'MONTHLY REVENUE', value: '₹34,82,000', change: '+22.8%', icon: 'payments', positive: true },
     { label: 'ACTIVE NUTRITIONISTS', value: '28', change: '+3 new', icon: 'local_hospital', positive: true },
     { label: 'BOOKED CONSULTATIONS', value: '412', change: '+8.4%', icon: 'calendar_month', positive: true }
   ],
@@ -349,26 +349,3 @@ export const ADMIN_DASHBOARD_DATA = {
   ]
 };
 
-export const PROTOTYPES_METADATA = [
-  { id: 'home_nutrifuel_2', folder: 'home_nutrifuel_2', title: 'NutriFuel Landing Home', category: 'Landing' },
-  { id: 'join_nutrifuel', folder: 'join_nutrifuel', title: 'Auth & Sign In / Join Portal', category: 'Authentication' },
-  { id: 'home_nutrifuel_1', folder: 'home_nutrifuel_1', title: 'Sign In Alternative Layout', category: 'Authentication' },
-  { id: 'about_us_nutrifuel', folder: 'about_us_nutrifuel', title: 'About NutriFuel - Forge Your Machine', category: 'Information' },
-  { id: 'our_services_nutrifuel', folder: 'our_services_nutrifuel', title: 'Our Services & Pricing Plans', category: 'Services' },
-  { id: 'book_a_consultation_nutrifuel', folder: 'book_a_consultation_nutrifuel', title: 'Book a Consultation Flow', category: 'Booking' },
-  { id: 'nutritionist_profile_nutrifuel', folder: 'nutritionist_profile_nutrifuel', title: 'Dr. Sarah Jenkins Profile', category: 'Specialists' },
-  { id: 'nutrition_in_action_nutrifuel', folder: 'nutrition_in_action_nutrifuel', title: 'Nutrition In Action Showcase', category: 'Gallery' },
-  { id: 'success_stories_nutrifuel', folder: 'success_stories_nutrifuel', title: 'Success Stories & Athlete Case Studies', category: 'Social Proof' },
-  { id: 'my_profile_nutrifuel', folder: 'my_profile_nutrifuel', title: 'User Profile & Macro Dashboard', category: 'Member Portal' },
-  { id: 'checkout_nutrifuel', folder: 'checkout_nutrifuel', title: 'Secure Checkout & Payment', category: 'Billing' },
-  { id: 'payment_history_nutrifuel', folder: 'payment_history_nutrifuel', title: 'Payment History & Invoices', category: 'Billing' },
-  { id: 'admin_dashboard_nutrifuel', folder: 'admin_dashboard_nutrifuel', title: 'Admin Command Center', category: 'Admin' },
-  { id: 'nutrifuel', folder: 'nutrifuel', title: 'Design System Tokens & Brand Guide', category: 'Design System' },
-  { id: 'untitled_prototype_1', folder: 'untitled_prototype_1', title: 'Prototype Variant 1', category: 'Prototypes' },
-  { id: 'untitled_prototype_2', folder: 'untitled_prototype_2', title: 'Prototype Variant 2', category: 'Prototypes' },
-  { id: 'untitled_prototype_3', folder: 'untitled_prototype_3', title: 'Prototype Variant 3', category: 'Prototypes' },
-  { id: 'untitled_prototype_4', folder: 'untitled_prototype_4', title: 'Prototype Variant 4', category: 'Prototypes' },
-  { id: 'untitled_prototype_5', folder: 'untitled_prototype_5', title: 'Prototype Variant 5', category: 'Prototypes' },
-  { id: 'untitled_prototype_6', folder: 'untitled_prototype_6', title: 'Prototype Variant 6', category: 'Prototypes' },
-  { id: 'untitled_prototype_7', folder: 'untitled_prototype_7', title: 'Prototype Variant 7', category: 'Prototypes' }
-];

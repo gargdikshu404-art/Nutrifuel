@@ -20,7 +20,7 @@ export const Checkout = ({ setActivePage }) => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [createdInvoice, setCreatedInvoice] = useState(null);
 
-  const subtotal = selectedPlan?.price || 249;
+  const subtotal = selectedPlan?.price || 2499;
   const discountAmount = (subtotal * (discountApplied / 100));
   const total = subtotal - discountAmount;
 
@@ -155,7 +155,7 @@ export const Checkout = ({ setActivePage }) => {
               <div className="p-6 bg-surface-container-low border border-white/10 space-y-4">
                 <h3 className="font-display-lg text-lg uppercase text-white flex items-center gap-2">
                   <span className="w-5 h-5 bg-secondary text-primary-container font-label-caps text-xs font-bold flex items-center justify-center">2</span>
-                  Payment Card Credentials
+                  Payment Method (UPI / Card)
                 </h3>
 
                 <div className="space-y-4">
@@ -171,7 +171,7 @@ export const Checkout = ({ setActivePage }) => {
                   </div>
 
                   <div>
-                    <label className="font-label-caps text-[11px] uppercase text-on-surface-variant block mb-1">Card Number</label>
+                    <label className="font-label-caps text-[11px] uppercase text-on-surface-variant block mb-1">Card / UPI ID</label>
                     <div className="relative">
                       <input
                         type="text"
@@ -215,7 +215,7 @@ export const Checkout = ({ setActivePage }) => {
                 type="submit"
                 className="w-full py-5 bg-gradient-to-r from-secondary-container to-secondary text-primary-container font-headline-md text-base uppercase font-bold hover:neon-glow hover:brightness-110 transition-all flex items-center justify-center gap-2"
               >
-                <span>Authorize & Pay ${total.toFixed(2)}</span>
+                <span>Authorize & Pay ₹{total.toFixed(2)}</span>
                 <span className="material-symbols-outlined text-lg">lock</span>
               </button>
             </form>
@@ -235,7 +235,7 @@ export const Checkout = ({ setActivePage }) => {
                     </span>
                   </div>
                   <span className="font-display-lg text-xl text-white">
-                    ${selectedPlan.price}{selectedPlan.period}
+                    ₹{selectedPlan.price}{selectedPlan.period}
                   </span>
                 </div>
 
@@ -272,21 +272,21 @@ export const Checkout = ({ setActivePage }) => {
                 <div className="pt-4 border-t border-white/10 font-label-caps text-xs space-y-2">
                   <div className="flex justify-between text-on-surface-variant">
                     <span>Base Subscription:</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>₹{subtotal.toFixed(2)}</span>
                   </div>
                   {discountApplied > 0 && (
                     <div className="flex justify-between text-secondary font-bold">
                       <span>Promo Discount ({discountApplied}%):</span>
-                      <span>-${discountAmount.toFixed(2)}</span>
+                      <span>-₹{discountAmount.toFixed(2)}</span>
                     </div>
                   )}
                   <div className="flex justify-between text-on-surface-variant">
                     <span>Tax & Processing:</span>
-                    <span>$0.00</span>
+                    <span>₹0.00</span>
                   </div>
                   <div className="flex justify-between text-base font-display-lg uppercase text-white pt-2 border-t border-white/10">
                     <span>Total Due Now:</span>
-                    <span className="text-secondary">${total.toFixed(2)}</span>
+                    <span className="text-secondary">₹{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>

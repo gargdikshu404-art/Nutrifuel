@@ -43,9 +43,9 @@ export const Services = ({ setActivePage }) => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 font-label-caps text-xs uppercase border transition-all ${
+                className={`px-5 py-2 rounded-full font-body-md text-xs font-semibold uppercase border transition-all ${
                   activeCategory === cat
-                    ? 'bg-secondary text-primary-container border-secondary font-bold neon-glow'
+                    ? 'bg-secondary text-primary-container border-secondary font-bold shadow-md'
                     : 'bg-surface-container border-white/10 text-on-surface hover:border-white/30'
                 }`}
               >
@@ -63,14 +63,14 @@ export const Services = ({ setActivePage }) => {
             {filteredPlans.map((plan) => (
               <div
                 key={plan.id}
-                className={`p-8 bg-surface-container-low border transition-all duration-300 flex flex-col justify-between group ${
+                className={`p-8 bg-surface-container-low border rounded-2xl transition-all duration-300 flex flex-col justify-between group ${
                   plan.isElite
                     ? 'border-2 border-secondary-container shadow-[0_0_25px_rgba(255,74,141,0.2)] relative'
-                    : 'border-white/10 hover:border-secondary/60'
+                    : 'border-white/10 hover:border-secondary/50'
                 }`}
               >
                 {plan.isElite && (
-                  <div className="absolute -top-3.5 right-6 bg-secondary-container px-3 py-0.5 font-label-caps text-[10px] uppercase text-white font-bold tracking-wider">
+                  <div className="absolute -top-3.5 right-6 bg-secondary-container px-3 py-0.5 rounded-full font-label-caps text-[10px] uppercase text-white font-bold tracking-wider">
                     MOST RECOMMENDED
                   </div>
                 )}
@@ -80,7 +80,7 @@ export const Services = ({ setActivePage }) => {
                     <span className="material-symbols-outlined text-secondary text-4xl group-hover:scale-110 transition-transform">
                       {plan.icon}
                     </span>
-                    <span className={`px-2.5 py-1 font-label-caps text-[10px] uppercase tracking-wider ${
+                    <span className={`px-3 py-1 rounded-full font-label-caps text-[10px] uppercase font-bold tracking-wider ${
                       plan.isElite ? 'bg-secondary-container text-white' : 'border border-white/20 text-on-surface'
                     }`}>
                       {plan.badge}
@@ -109,16 +109,16 @@ export const Services = ({ setActivePage }) => {
                   <div className="border-t border-white/10 pt-4 mb-5 flex justify-between items-baseline">
                     <span className="font-label-caps text-xs text-surface-tint uppercase">STARTING AT</span>
                     <span className="font-display-lg text-3xl text-secondary">
-                      ${plan.price}
+                      ₹{plan.price}
                       <span className="font-body-md text-sm text-on-surface-variant">{plan.period}</span>
                     </span>
                   </div>
 
                   <button
                     onClick={() => handleSelectPlan(plan)}
-                    className={`w-full py-4 font-label-caps text-xs uppercase transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full py-3.5 font-body-md text-xs font-semibold uppercase rounded-xl transition-all flex items-center justify-center gap-2 ${
                       plan.isElite
-                        ? 'bg-gradient-to-r from-secondary-container to-secondary text-primary-container font-bold hover:neon-glow hover:brightness-110'
+                        ? 'bg-gradient-to-r from-secondary-container to-secondary text-primary-container font-bold hover:brightness-110 neon-glow'
                         : 'bg-surface-container border border-white/20 text-white hover:border-secondary hover:bg-secondary/10'
                     }`}
                   >

@@ -16,16 +16,61 @@ export const About = ({ setActivePage }) => {
 
         <div className="relative z-10 max-w-container-max mx-auto px-gutter">
           <div className="max-w-2xl">
-            <span className="font-label-caps text-xs uppercase text-secondary tracking-widest block mb-3">
-              The Origin // Est. 2020
+            <span className="font-label-caps text-xs uppercase text-secondary tracking-widest block mb-3 font-bold">
+              The Mission // Est. 2024
             </span>
             <h1 className="font-display-lg text-4xl sm:text-6xl md:text-7xl uppercase text-white leading-none mb-6">
-              Forge Your <br />
-              <span className="text-secondary-container">Machine.</span>
+              About <span className="text-secondary-container">NutriFuel</span>
             </h1>
-            <p className="font-body-lg text-lg text-on-surface-variant leading-relaxed">
-              We reject the soft, muted trends in modern wellness. High-performance bodies are precision engines—they demand uncompromising, mathematically calculated fueling protocols.
+            <p className="font-body-lg text-base sm:text-lg text-on-surface-variant leading-relaxed">
+              NutriFuel is a precision nutrition and athletic fueling platform engineered for high-performance athletes, bodybuilders, and fitness enthusiasts. We reject generic diet templates in favor of calculated biological blueprints backed by sports bioenergetics.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Features Section */}
+      <section className="py-20 bg-surface-container-low border-b-2 border-outline-variant">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="max-w-xl mb-12">
+            <span className="font-label-caps text-xs uppercase text-secondary tracking-widest block mb-2 font-bold">
+              What We Offer
+            </span>
+            <h2 className="font-display-lg text-3xl sm:text-5xl uppercase text-white">
+              Precision Nutrition Architecture
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-surface-container border border-white/10 space-y-4">
+              <div className="w-12 h-12 bg-secondary-container flex items-center justify-center text-white neon-glow">
+                <span className="material-symbols-outlined text-2xl">monitoring</span>
+              </div>
+              <h3 className="font-display-lg text-xl uppercase text-white">Dynamic Macro Tracking</h3>
+              <p className="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                Track your daily caloric and macronutrient ratios (Protein, Carbs, Fats, Water) with precision biofeedback matched to your body composition targets.
+              </p>
+            </div>
+
+            <div className="p-6 bg-surface-container border border-white/10 space-y-4">
+              <div className="w-12 h-12 bg-secondary-container flex items-center justify-center text-white neon-glow">
+                <span className="material-symbols-outlined text-2xl">calendar_month</span>
+              </div>
+              <h3 className="font-display-lg text-xl uppercase text-white">Expert Consultation Booking</h3>
+              <p className="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                Schedule 1-on-1 video consultations, chat protocol audits, or in-person lab visits directly with doctorates and board-certified sports dietitians.
+              </p>
+            </div>
+
+            <div className="p-6 bg-surface-container border border-white/10 space-y-4">
+              <div className="w-12 h-12 bg-secondary-container flex items-center justify-center text-white neon-glow">
+                <span className="material-symbols-outlined text-2xl">admin_panel_settings</span>
+              </div>
+              <h3 className="font-display-lg text-xl uppercase text-white">Admin Command Center</h3>
+              <p className="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                Comprehensive Admin Dashboard for operations, roster management, consultation ledgers, and revenue analytics tracked transparently in Indian Rupees (₹).
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -34,7 +79,7 @@ export const About = ({ setActivePage }) => {
       <section className="py-20 bg-surface-container-lowest border-b-2 border-outline-variant">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="max-w-xl mb-14">
-            <span className="font-label-caps text-xs uppercase text-secondary tracking-widest block mb-2">
+            <span className="font-label-caps text-xs uppercase text-secondary tracking-widest block mb-2 font-bold">
               Uncompromising Foundations
             </span>
             <h2 className="font-display-lg text-3xl sm:text-5xl uppercase text-white">
@@ -104,7 +149,7 @@ export const About = ({ setActivePage }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <span className="font-display-lg text-4xl sm:text-5xl text-secondary block">100%</span>
-              <span className="font-label-caps text-xs uppercase text-on-surface-variant mt-2 block">Custom Formulas</span>
+              <span className="font-label-caps text-xs uppercase text-on-surface-variant mt-2 block">Custom INR Protocols</span>
             </div>
             <div>
               <span className="font-display-lg text-4xl sm:text-5xl text-white block">850k+</span>
@@ -134,7 +179,7 @@ export const About = ({ setActivePage }) => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={() => { setActivePage('book'); window.scrollTo(0,0); }}
-              className="px-8 py-4 bg-secondary-container text-white font-label-caps text-xs uppercase neon-glow hover:bg-hot-pink transition-all"
+              className="px-8 py-4 bg-secondary-container text-white font-label-caps text-xs uppercase neon-glow hover:bg-hot-pink transition-all font-bold"
             >
               Book Specialist Consult
             </button>

@@ -22,15 +22,9 @@ export const JoinAuth = ({ setActivePage }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleQuickAdminLogin = () => {
-    login('admin@nutrifuel.io', 'admin123');
-    setActivePage('admin');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className="bg-background text-on-surface min-h-[calc(100vh-80px)] flex flex-col md:flex-row antialiased">
-      {/* Left Side: Brand Imagery (from join_nutrifuel & home_nutrifuel_1) */}
+      {/* Left Side: Brand Imagery */}
       <div className="relative w-full md:w-1/2 min-h-[320px] md:min-h-full flex flex-col justify-end p-8 md:p-16 overflow-hidden border-b-2 md:border-b-0 md:border-r-2 border-outline-variant">
         <div className="absolute inset-0 z-0">
           <img
@@ -67,41 +61,32 @@ export const JoinAuth = ({ setActivePage }) => {
         <div className="w-full max-w-md">
           {/* Header */}
           <div className="mb-8">
-            <h2 className="font-display-lg text-3xl uppercase text-white mb-1">Access Portal</h2>
+            <h2 className="font-display-lg text-3xl uppercase text-white mb-1">User Access Portal</h2>
             <p className="font-body-md text-xs text-on-surface-variant">
-              Enter your credentials to manage your metabolic blueprint.
+              Enter your credentials to manage your athletic nutrition & biofeedback profile.
             </p>
           </div>
 
           {/* Quick Demo Login Bar */}
-          <div className="mb-6 p-3 bg-surface-container border border-secondary/40 flex items-center justify-between">
+          <div className="mb-6 p-3.5 bg-surface-container border border-secondary/30 rounded-xl flex items-center justify-between">
             <div>
-              <span className="font-label-caps text-[10px] text-secondary uppercase block font-bold">1-Click Fast Auth:</span>
-              <span className="font-body-md text-[11px] text-white">Instant Demo Persona</span>
+              <span className="font-label-caps text-[10px] text-secondary uppercase block font-bold">Quick Demo Login:</span>
+              <span className="font-body-md text-xs text-white font-medium">Alex Vance (Athlete)</span>
             </div>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={handleQuickMemberLogin}
-                className="px-2.5 py-1 bg-secondary-container text-white font-label-caps text-[10px] uppercase font-bold hover:bg-hot-pink transition-all"
-              >
-                Alex Vance (Member)
-              </button>
-              <button
-                type="button"
-                onClick={handleQuickAdminLogin}
-                className="px-2.5 py-1 bg-surface-container-high border border-white/20 text-white font-label-caps text-[10px] uppercase hover:border-secondary transition-all"
-              >
-                Admin
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={handleQuickMemberLogin}
+              className="px-3.5 py-1.5 bg-secondary-container text-white font-body-md text-xs font-semibold rounded-lg hover:bg-hot-pink transition-all neon-glow"
+            >
+              Sign In Demo Account
+            </button>
           </div>
 
           {/* Tabs */}
-          <div className="flex border-b-2 border-outline-variant mb-6">
+          <div className="flex border-b border-white/10 mb-6">
             <button
               onClick={() => setTab('signin')}
-              className={`flex-1 pb-3 text-center font-label-caps text-xs uppercase tracking-wider transition-all border-b-2 ${
+              className={`flex-1 pb-3 text-center font-body-md text-xs font-semibold uppercase tracking-wider transition-all border-b-2 ${
                 tab === 'signin'
                   ? 'border-secondary text-secondary font-bold'
                   : 'border-transparent text-on-surface-variant hover:text-white'
@@ -111,7 +96,7 @@ export const JoinAuth = ({ setActivePage }) => {
             </button>
             <button
               onClick={() => setTab('signup')}
-              className={`flex-1 pb-3 text-center font-label-caps text-xs uppercase tracking-wider transition-all border-b-2 ${
+              className={`flex-1 pb-3 text-center font-body-md text-xs font-semibold uppercase tracking-wider transition-all border-b-2 ${
                 tab === 'signup'
                   ? 'border-secondary text-secondary font-bold'
                   : 'border-transparent text-on-surface-variant hover:text-white'
@@ -122,9 +107,9 @@ export const JoinAuth = ({ setActivePage }) => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block font-label-caps text-[11px] uppercase text-on-surface-variant mb-1">
+              <label className="block font-label-caps text-[11px] uppercase text-on-surface-variant mb-1.5 font-bold">
                 Email Address
               </label>
               <input
@@ -132,13 +117,13 @@ export const JoinAuth = ({ setActivePage }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="alex.vance@nutrifuel.io"
-                className="w-full bg-background border-b-2 border-white/20 px-3 py-2.5 font-body-md text-sm text-white focus:border-secondary focus:outline-none transition-colors"
+                className="w-full bg-background border border-white/15 rounded-xl px-3.5 py-2.5 font-body-md text-sm text-white focus:border-secondary focus:outline-none transition-all"
                 required
               />
             </div>
 
             <div className="relative">
-              <label className="block font-label-caps text-[11px] uppercase text-on-surface-variant mb-1">
+              <label className="block font-label-caps text-[11px] uppercase text-on-surface-variant mb-1.5 font-bold">
                 Password
               </label>
               <input
@@ -146,13 +131,13 @@ export const JoinAuth = ({ setActivePage }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••••••"
-                className="w-full bg-background border-b-2 border-white/20 px-3 py-2.5 font-body-md text-sm text-white focus:border-secondary focus:outline-none transition-colors pr-10"
+                className="w-full bg-background border border-white/15 rounded-xl px-3.5 py-2.5 font-body-md text-sm text-white focus:border-secondary focus:outline-none transition-all pr-10"
                 required
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-2 top-8 text-on-surface-variant hover:text-secondary"
+                className="absolute right-3 top-9 text-on-surface-variant hover:text-secondary"
               >
                 <span className="material-symbols-outlined text-lg">
                   {showPassword ? 'visibility_off' : 'visibility'}
@@ -166,7 +151,7 @@ export const JoinAuth = ({ setActivePage }) => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="rounded-none bg-background border-white/30 text-secondary focus:ring-0"
+                  className="rounded bg-background border-white/30 text-secondary focus:ring-0"
                 />
                 <span className="font-body-md text-on-surface-variant">Remember device</span>
               </label>
@@ -177,9 +162,9 @@ export const JoinAuth = ({ setActivePage }) => {
 
             <button
               type="submit"
-              className="w-full py-4 bg-gradient-to-r from-secondary-container to-secondary text-primary-container font-headline-md text-base uppercase font-bold hover:neon-glow hover:brightness-110 transition-all flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-gradient-to-r from-secondary-container to-secondary text-primary-container font-body-md text-sm font-bold uppercase rounded-xl hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
-              <span>{tab === 'signin' ? 'Initialize Portal' : 'Register Bio-Profile'}</span>
+              <span>{tab === 'signin' ? 'Sign In to Portal' : 'Register Account'}</span>
               <span className="material-symbols-outlined text-lg">arrow_forward</span>
             </button>
           </form>

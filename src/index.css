@@ -12,11 +12,11 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0e0e0e;
+  background: #111111;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
-  border-radius: 2px;
+  background: #2b2b2b;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #ff4a8d;
@@ -25,65 +25,51 @@
 /* Typography Utility Classes */
 .font-display-lg {
   font-family: 'Anton', sans-serif;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 .font-label-caps {
   font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 }
 
 .font-body-md {
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
-/* Custom Neon & Aesthetic Utilities */
+/* Simple & Clean UI Design System Utilities */
+.card-simple {
+  background-color: rgba(28, 27, 27, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+.card-simple:hover {
+  border-color: rgba(255, 74, 141, 0.35);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 74, 141, 0.12);
+  transform: translateY(-2px);
+}
+
+.btn-simple {
+  border-radius: 0.5rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.badge-simple {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 .neon-glow {
-  box-shadow: 0 0 16px 0px rgba(255, 74, 141, 0.35);
+  box-shadow: 0 0 14px 0px rgba(255, 74, 141, 0.3);
 }
 .neon-glow:hover {
-  box-shadow: 0 0 26px 4px rgba(255, 74, 141, 0.55);
-}
-
-.neon-border {
-  border: 1px solid rgba(255, 0, 127, 0.7);
-  box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
-}
-
-.pink-gradient-text {
-  background: linear-gradient(135deg, #ffb1c4 0%, #ff4a8d 50%, #ff007f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.btn-primary-action {
-  background: linear-gradient(135deg, #ff4a8d 0%, #ff007f 100%);
-  color: #ffffff;
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-.btn-primary-action:hover {
-  border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 25px rgba(255, 74, 141, 0.6);
-  transform: translateY(-1px);
-}
-.btn-primary-action:active {
-  transform: translateY(1px);
-}
-
-.card-athletic {
-  background: #1c1b1b;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.25s ease;
-}
-.card-athletic:hover {
-  border-color: rgba(255, 74, 141, 0.4);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 74, 141, 0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 0 22px 2px rgba(255, 74, 141, 0.5);
 }
 
 .input-underline {
@@ -108,19 +94,4 @@
 }
 .material-symbols-fill {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
-
-/* Pulse animation for live indicators */
-@keyframes neonPulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.65;
-    transform: scale(0.96);
-  }
-}
-.animate-neon-pulse {
-  animation: neonPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

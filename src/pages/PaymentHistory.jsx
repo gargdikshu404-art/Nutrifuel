@@ -61,7 +61,7 @@ export const PaymentHistory = ({ setActivePage }) => {
               {selectedPlan?.title || 'Sports Nutrition Elite'}
             </h3>
             <p className="font-body-md text-xs text-on-surface-variant">
-              Billed at <strong className="text-white">${selectedPlan?.price || 249}.00{selectedPlan?.period || '/mo'}</strong>. Next auto-renewal on <strong className="text-secondary">September 01, 2024</strong>.
+              Billed at <strong className="text-white">₹{selectedPlan?.price || 2499}.00{selectedPlan?.period || '/mo'}</strong>. Next auto-renewal on <strong className="text-secondary font-bold">September 01, 2024</strong>.
             </p>
             <div className="pt-2 flex gap-3">
               <button

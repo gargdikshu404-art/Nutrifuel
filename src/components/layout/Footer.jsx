@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Footer = ({ setActivePage, openPrototypeDrawer }) => {
+export const Footer = ({ setActivePage }) => {
   return (
     <footer className="bg-surface-container-lowest border-t-2 border-secondary relative z-20 mt-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-stack-lg px-gutter py-stack-lg w-full max-w-container-max mx-auto">
@@ -36,21 +36,21 @@ export const Footer = ({ setActivePage, openPrototypeDrawer }) => {
             </div>
 
             <div>
-              <h4 className="font-label-caps text-xs uppercase text-white font-bold mb-3 tracking-wider">Members</h4>
+              <h4 className="font-label-caps text-xs uppercase text-white font-bold mb-3 tracking-wider">Members & Admin</h4>
               <ul className="space-y-2 font-label-caps text-xs uppercase text-on-surface-variant">
                 <li><button onClick={() => { setActivePage('profile'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">My Profile</button></li>
                 <li><button onClick={() => { setActivePage('book'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">Book Consult</button></li>
                 <li><button onClick={() => { setActivePage('payments'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">Billing Logs</button></li>
-                <li><button onClick={() => { setActivePage('admin'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">Admin Panel</button></li>
+                <li><button onClick={() => { setActivePage('admin'); window.scrollTo(0,0); }} className="hover:text-secondary font-bold text-secondary transition-colors">Admin Panel</button></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-label-caps text-xs uppercase text-white font-bold mb-3 tracking-wider">Prototypes</h4>
+              <h4 className="font-label-caps text-xs uppercase text-white font-bold mb-3 tracking-wider">Showcase</h4>
               <ul className="space-y-2 font-label-caps text-xs uppercase text-on-surface-variant">
-                <li><button onClick={openPrototypeDrawer} className="text-secondary hover:underline flex items-center gap-1">All 21 Folders <span className="material-symbols-outlined text-xs">arrow_forward</span></button></li>
                 <li><button onClick={() => { setActivePage('action'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">In Action</button></li>
                 <li><button onClick={() => { setActivePage('stories'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">Testimonials</button></li>
+                <li><button onClick={() => { setActivePage('join'); window.scrollTo(0,0); }} className="hover:text-secondary transition-colors">User Sign In</button></li>
               </ul>
             </div>
           </div>
