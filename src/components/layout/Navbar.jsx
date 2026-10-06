@@ -15,7 +15,8 @@ export const Navbar = ({ activePage, setActivePage }) => {
     { id: 'nutritionists', label: 'Nutritionists' },
     { id: 'action', label: 'In Action' },
     { id: 'stories', label: 'Testimonials' },
-    { id: 'admin', label: 'Admin Panel' }
+    { id: 'admin', label: 'Admin Panel' },
+    { id: 'join', label: 'Sign In' }
   ];
 
   const handleNavClick = (pageId) => {

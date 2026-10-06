@@ -5,10 +5,12 @@ export const NutritionInAction = ({ setActivePage }) => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [activeMealModal, setActiveMealModal] = useState(null);
 
-  const categories = ['ALL', 'Post-Workout Hypertrophy', 'Endurance Recovery', 'Pre-Workout Fuel', 'Clean Bulking'];
+  const categories = ['ALL', 'PURE VEG 🌱', 'Post-Workout Hypertrophy', 'Endurance Recovery', 'Pre-Workout Fuel', 'Clean Bulking'];
 
   const filteredMeals = selectedCategory === 'ALL'
     ? NUTRITION_SHOWCASE
+    : selectedCategory === 'PURE VEG 🌱'
+    ? NUTRITION_SHOWCASE.filter(m => m.isVeg)
     : NUTRITION_SHOWCASE.filter(m => m.category === selectedCategory);
 
   return (

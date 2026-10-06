@@ -267,6 +267,7 @@ export const NUTRITION_SHOWCASE = [
     id: 'meal-8',
     title: 'Micellar Casein & Overnight Chia Parfait',
     category: 'Pre-Workout Fuel',
+    isVeg: true,
     calories: 510,
     protein: 44,
     carbs: 54,
@@ -274,7 +275,63 @@ export const NUTRITION_SHOWCASE = [
     prepTime: '5 Min',
     image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80',
     description: 'Sustained-release micellar casein protein layered with organic chia seeds, greek yogurt, fresh raspberries, and almond butter.',
-    highlights: ['8-Hour Slow-Release Amino Acid Pool', 'High Soluble Fiber', 'Sustained Glycemic Stability']
+    highlights: ['100% Vegetarian (Pure Veg)', '8-Hour Slow-Release Amino Acid Pool', 'Sustained Glycemic Stability']
+  },
+  {
+    id: 'meal-veg-1',
+    title: 'High-Protein Paneer Tikka & Quinoa Bowl',
+    category: 'Post-Workout Hypertrophy',
+    isVeg: true,
+    calories: 680,
+    protein: 48,
+    carbs: 62,
+    fats: 22,
+    prepTime: '15 Min',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+    description: 'Grilled organic cottage cheese marinated in smoked tandoori spices, served with tricolor quinoa, roasted bell peppers, and mint chutney.',
+    highlights: ['100% Pure Veg High Protein', 'High Casein & Whey Ratio', 'Rich in Calcium & Magnesium']
+  },
+  {
+    id: 'meal-veg-2',
+    title: 'Spiced Chickpea & Avocado Buddha Bowl',
+    category: 'Endurance Recovery',
+    isVeg: true,
+    calories: 590,
+    protein: 38,
+    carbs: 72,
+    fats: 18,
+    prepTime: '10 Min',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    description: 'Crispy roasted chickpeas, Haas avocado, steamed edamame, and baby spinach drizzled with tahini lemon dressing over brown jasmine rice.',
+    highlights: ['100% Plant-Based Veg', 'High Complex Carbs for Glycogen', 'Rich in Soluble Fiber']
+  },
+  {
+    id: 'meal-veg-3',
+    title: 'Tofu & Broccoli Protein Power Stack',
+    category: 'Clean Bulking',
+    isVeg: true,
+    calories: 740,
+    protein: 52,
+    carbs: 78,
+    fats: 20,
+    prepTime: '20 Min',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    description: 'Pan-fried organic non-GMO tofu cubes tossed with garlic steamed broccoli, brown lentils, and toasted pumpkin seeds.',
+    highlights: ['100% High-Density Veg Protein', 'Complete Amino Acid Profile', 'Zero Cholesterol']
+  },
+  {
+    id: 'meal-veg-4',
+    title: 'Almond Milk Oats & Protein Berry Smoothie Bowl',
+    category: 'Pre-Workout Fuel',
+    isVeg: true,
+    calories: 480,
+    protein: 36,
+    carbs: 64,
+    fats: 10,
+    prepTime: '5 Min',
+    image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=80',
+    description: 'Organic rolled oats blended with plant protein isolate, unsweetened almond milk, chia seeds, and wild forest berries.',
+    highlights: ['100% Pure Veg Energy Bowl', 'Rapid Fast-Acting Energy', 'Polyphenol Antioxidant Boost']
   }
 ];
 
