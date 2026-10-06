@@ -34,9 +34,9 @@ export const NutritionInAction = ({ setActivePage }) => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 font-label-caps text-xs uppercase border transition-all ${
+                className={`px-4 py-2 rounded-full font-body-md text-xs font-semibold uppercase border transition-all ${
                   selectedCategory === cat
-                    ? 'bg-secondary text-primary-container border-secondary font-bold'
+                    ? 'bg-secondary text-primary-container border-secondary font-bold shadow-md'
                     : 'bg-surface-container border-white/10 text-on-surface hover:border-secondary'
                 }`}
               >
@@ -53,7 +53,7 @@ export const NutritionInAction = ({ setActivePage }) => {
           {filteredMeals.map((meal) => (
             <div
               key={meal.id}
-              className="bg-surface-container-low border border-white/10 hover:border-secondary transition-all flex flex-col justify-between overflow-hidden group"
+              className="bg-surface-container-low border border-white/10 hover:border-secondary/50 rounded-2xl transition-all flex flex-col justify-between overflow-hidden group shadow-lg"
             >
               <div>
                 <div className="relative h-64 overflow-hidden border-b border-white/10">
@@ -62,10 +62,10 @@ export const NutritionInAction = ({ setActivePage }) => {
                     alt={meal.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 contrast-125 brightness-95"
                   />
-                  <div className="absolute top-3 left-3 bg-secondary-container px-2.5 py-1 font-label-caps text-[10px] uppercase text-white font-bold">
+                  <div className="absolute top-3 left-3 bg-secondary-container px-3 py-1 rounded-full font-label-caps text-[10px] uppercase text-white font-bold tracking-wider">
                     {meal.category}
                   </div>
-                  <div className="absolute bottom-3 right-3 bg-black/80 backdrop-blur px-3 py-1 border border-white/20 font-label-caps text-xs text-white">
+                  <div className="absolute bottom-3 right-3 bg-black/80 backdrop-blur px-3 py-1 rounded-lg border border-white/20 font-label-caps text-xs text-white">
                     ⏱ {meal.prepTime}
                   </div>
                 </div>
@@ -77,7 +77,7 @@ export const NutritionInAction = ({ setActivePage }) => {
                   </p>
 
                   {/* Macro Gauges */}
-                  <div className="grid grid-cols-4 gap-2 text-center p-3 bg-surface-container border border-white/5 mb-6">
+                  <div className="grid grid-cols-4 gap-2 text-center p-3 bg-surface-container rounded-xl border border-white/5 mb-6">
                     <div>
                       <span className="font-display-lg text-lg text-secondary block">{meal.calories}</span>
                       <span className="font-label-caps text-[9px] text-on-surface-variant uppercase">KCAL</span>
@@ -100,7 +100,7 @@ export const NutritionInAction = ({ setActivePage }) => {
                   <div className="space-y-1.5 mb-2">
                     {meal.highlights.map((hl, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-[11px] font-label-caps text-on-surface-variant">
-                        <span className="w-1.5 h-1.5 bg-secondary-container rounded-none"></span>
+                        <span className="w-1.5 h-1.5 bg-secondary-container rounded-full"></span>
                         <span>{hl}</span>
                       </div>
                     ))}
@@ -111,7 +111,7 @@ export const NutritionInAction = ({ setActivePage }) => {
               <div className="p-6 pt-0">
                 <button
                   onClick={() => setActiveMealModal(meal)}
-                  className="w-full py-3 bg-surface-container border border-white/20 hover:border-secondary text-white font-label-caps text-xs uppercase transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-surface-container border border-white/15 rounded-xl hover:border-secondary hover:bg-secondary/10 text-white font-body-md text-xs font-semibold uppercase transition-all flex items-center justify-center gap-2"
                 >
                   <span>View Biochemical Breakdown</span>
                   <span className="material-symbols-outlined text-sm">restaurant</span>

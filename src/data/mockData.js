@@ -223,6 +223,58 @@ export const NUTRITION_SHOWCASE = [
     image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80',
     description: 'Lean ground bison seasoned with smoked paprika, layered over steaming jasmine rice and charred asparagus spears.',
     highlights: ['Lean Muscle Retention', 'Ultra-Low Saturated Fat Profile', 'High Creatine Density']
+  },
+  {
+    id: 'meal-5',
+    title: 'Seared Yellowfin Tuna & Avocado Poke Bowl',
+    category: 'Endurance Recovery',
+    calories: 640,
+    protein: 56,
+    carbs: 52,
+    fats: 20,
+    prepTime: '12 Min',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+    description: 'Sustainably caught yellowfin tuna steak with sesame dressing, ponzu edamame, sliced Haas avocado, and brown jasmine rice.',
+    highlights: ['Rich in Omega-3 EPA/DHA', 'High Bioavailability Protein', 'Zero Trans Fats']
+  },
+  {
+    id: 'meal-6',
+    title: 'Grass-Fed Beef Patty & Sweet Potato Mash',
+    category: 'Post-Workout Hypertrophy',
+    calories: 780,
+    protein: 64,
+    carbs: 70,
+    fats: 24,
+    prepTime: '18 Min',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80',
+    description: 'Dual grass-fed organic beef patties over cinnamon-seasoned sweet potato mash with steamed asparagus spears.',
+    highlights: ['High Natural Creatine Content', 'Accelerated Glycogen Replenishment', 'Rich in Iron & Zinc']
+  },
+  {
+    id: 'meal-7',
+    title: 'Organic Chicken Breast & Roasted Quinoa Harvest',
+    category: 'Clean Bulking',
+    calories: 810,
+    protein: 70,
+    carbs: 82,
+    fats: 18,
+    prepTime: '22 Min',
+    image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80',
+    description: 'Herbed free-range chicken breast grilled over flame, served with toasted quinoa, roasted squash, and sea-salted almonds.',
+    highlights: ['Ultra-Lean Anabolic Surplus', 'High Fiber & Complex Carbs', 'Mitochondrial Energy Boost']
+  },
+  {
+    id: 'meal-8',
+    title: 'Micellar Casein & Overnight Chia Parfait',
+    category: 'Pre-Workout Fuel',
+    calories: 510,
+    protein: 44,
+    carbs: 54,
+    fats: 12,
+    prepTime: '5 Min',
+    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80',
+    description: 'Sustained-release micellar casein protein layered with organic chia seeds, greek yogurt, fresh raspberries, and almond butter.',
+    highlights: ['8-Hour Slow-Release Amino Acid Pool', 'High Soluble Fiber', 'Sustained Glycemic Stability']
   }
 ];
 
